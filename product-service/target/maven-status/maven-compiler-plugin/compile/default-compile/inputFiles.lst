@@ -1,0 +1,9 @@
+C:\Users\Jesus Curry\Downloads\spring-microservices-app\spring-microservices-app\product-service\src\main\java\com\example\productservice\controller\ProduitController.java
+C:\Users\Jesus Curry\Downloads\spring-microservices-app\spring-microservices-app\product-service\src\main\java\com\example\productservice\model\Produit.java
+C:\Users\Jesus Curry\Downloads\spring-microservices-app\spring-microservices-app\product-service\src\main\java\com\example\productservice\repository\ProduitRepository.java
+C:\Users\Jesus Curry\Downloads\spring-microservices-app\spring-microservices-app\product-service\src\main\java\com\example\productservice\model\Categorie.java
+C:\Users\Jesus Curry\Downloads\spring-microservices-app\spring-microservices-app\product-service\src\main\java\com\example\productservice\clients\CategoryClient.java
+C:\Users\Jesus Curry\Downloads\spring-microservices-app\spring-microservices-app\product-service\src\main\java\com\example\productservice\service\ProduitService.java
+C:\Users\Jesus Curry\Downloads\spring-microservices-app\spring-microservices-app\product-service\src\main\java\com\example\productservice\ProductServiceApplication.java
+C:\Users\Jesus Curry\Downloads\spring-microservices-app\spring-microservices-app\product-service\src\main\java\com\example\productservice\service\CategoryServiceProxy.java
+C:\Users\Jesus Curry\Downloads\spring-microservices-app\spring-microservices-app\product-service\src\main\java\com\example\productservice\controller\TestCategoryController.java

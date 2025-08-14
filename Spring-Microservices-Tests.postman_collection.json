@@ -1,0 +1,620 @@
+{
+	"info": {
+		"_postman_id": "spring-microservices-tests",
+		"name": "Spring Microservices Tests",
+		"description": "Collection de tests pour l'application Spring Microservices avec Discovery Server, Category Service et Product Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "spring-microservices"
+	},
+	"item": [
+		{
+			"name": "Discovery Server",
+			"item": [
+				{
+					"name": "Eureka Dashboard",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8761",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8761"
+						},
+						"description": "Accéder au dashboard Eureka pour voir les services enregistrés"
+					},
+					"response": []
+				},
+				{
+					"name": "Eureka API - Applications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8761/eureka/apps",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8761",
+							"path": [
+								"eureka",
+								"apps"
+							]
+						},
+						"description": "Récupérer la liste des applications enregistrées dans Eureka"
+					},
+					"response": []
+				}
+			],
+			"description": "Tests pour le Discovery Server (Eureka)"
+		},
+		{
+			"name": "Category Service",
+			"item": [
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8082/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"categories"
+							]
+						},
+						"description": "Récupérer toutes les catégories"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Category - Électronique",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nom\": \"Électronique\",\n    \"description\": \"Produits électroniques et gadgets technologiques\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"categories"
+							]
+						},
+						"description": "Créer une nouvelle catégorie Électronique"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Category - Vêtements",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nom\": \"Vêtements\",\n    \"description\": \"Habillement et accessoires vestimentaires\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"categories"
+							]
+						},
+						"description": "Créer une nouvelle catégorie Vêtements"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Category - Livres",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nom\": \"Livres\",\n    \"description\": \"Livres, magazines et publications\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"categories"
+							]
+						},
+						"description": "Créer une nouvelle catégorie Livres"
+					},
+					"response": []
+				},
+				{
+					"name": "Swagger UI - Category Service",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/swagger-ui.html",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"swagger-ui.html"
+							]
+						},
+						"description": "Accéder à l'interface Swagger du Category Service"
+					},
+					"response": []
+				}
+			],
+			"description": "Tests pour le Category Service"
+		},
+		{
+			"name": "Product Service",
+			"item": [
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Récupérer tous les produits"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product - Smartphone",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nom\": \"Smartphone Galaxy S23\",\n    \"prix\": 899.99,\n    \"description\": \"Smartphone Samsung dernière génération avec appareil photo 108MP\",\n    \"categorieId\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Créer un nouveau produit Smartphone"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product - iPhone",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nom\": \"iPhone 15 Pro\",\n    \"prix\": 1199.99,\n    \"description\": \"iPhone Apple avec puce A17 Pro et caméra triple\",\n    \"categorieId\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Créer un nouveau produit iPhone"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product - T-shirt",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nom\": \"T-shirt Cotton Premium\",\n    \"prix\": 29.99,\n    \"description\": \"T-shirt en coton bio de haute qualité\",\n    \"categorieId\": 2\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Créer un nouveau produit T-shirt"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product - Livre",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nom\": \"Le Petit Prince\",\n    \"prix\": 12.99,\n    \"description\": \"Classique de la littérature française\",\n    \"categorieId\": 3\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Créer un nouveau produit Livre"
+					},
+					"response": []
+				},
+				{
+					"name": "Test Communication with Category Service",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/test-categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"test-categories"
+							]
+						},
+						"description": "Tester la communication inter-services (Product Service → Category Service)"
+					},
+					"response": []
+				},
+				{
+					"name": "Swagger UI - Product Service",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/swagger-ui.html",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"swagger-ui.html"
+							]
+						},
+						"description": "Accéder à l'interface Swagger du Product Service"
+					},
+					"response": []
+				}
+			],
+			"description": "Tests pour le Product Service"
+		},
+		{
+			"name": "Actuator Endpoints",
+			"item": [
+				{
+					"name": "Health Check",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/actuator/health",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"actuator",
+								"health"
+							]
+						},
+						"description": "Vérifier l'état de santé du Product Service"
+					},
+					"response": []
+				},
+				{
+					"name": "Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/actuator/info",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"actuator",
+								"info"
+							]
+						},
+						"description": "Récupérer les informations du Product Service"
+					},
+					"response": []
+				},
+				{
+					"name": "Metrics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/actuator/metrics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"actuator",
+								"metrics"
+							]
+						},
+						"description": "Récupérer les métriques du Product Service"
+					},
+					"response": []
+				}
+			],
+			"description": "Tests pour les endpoints Actuator (monitoring)"
+		},
+		{
+			"name": "Tests de Charge",
+			"item": [
+				{
+					"name": "Load Test - Get Categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8082/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"categories"
+							]
+						},
+						"description": "Test de charge pour récupérer les catégories"
+					},
+					"response": []
+				},
+				{
+					"name": "Load Test - Get Products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Test de charge pour récupérer les produits"
+					},
+					"response": []
+				}
+			],
+			"description": "Tests de charge pour évaluer les performances"
+		},
+		{
+			"name": "Tests de Résilience",
+			"item": [
+				{
+					"name": "Test Communication After Category Service Restart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/test-categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"test-categories"
+							]
+						},
+						"description": "Tester la communication après redémarrage du Category Service"
+					},
+					"response": []
+				}
+			],
+			"description": "Tests de résilience pour vérifier la robustesse du système"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"// Script de pré-requête pour ajouter des logs",
+					"console.log('Exécution de la requête: ' + pm.request.name);",
+					"console.log('URL: ' + pm.request.url);",
+					"console.log('Méthode: ' + pm.request.method);"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"// Script de test pour valider les réponses",
+					"pm.test('Status code is 200', function () {",
+					"    pm.response.to.have.status(200);",
+					"});",
+					"",
+					"pm.test('Response time is less than 2000ms', function () {",
+					"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+					"});",
+					"",
+					"pm.test('Response has required headers', function () {",
+					"    pm.response.to.have.header('Content-Type');",
+					"});",
+					"",
+					"// Test spécifique pour les réponses JSON",
+					"if (pm.response.headers.get('Content-Type') && pm.response.headers.get('Content-Type').includes('application/json')) {",
+					"    pm.test('Response is valid JSON', function () {",
+					"        pm.response.to.be.json;",
+					"    });",
+					"}",
+					"",
+					"// Log de la réponse",
+					"console.log('Réponse reçue pour: ' + pm.request.name);",
+					"console.log('Status: ' + pm.response.status);",
+					"console.log('Response Time: ' + pm.response.responseTime + 'ms');"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "discovery_server_url",
+			"value": "http://localhost:8761",
+			"type": "string"
+		},
+		{
+			"key": "category_service_url",
+			"value": "http://localhost:8082",
+			"type": "string"
+		},
+		{
+			"key": "product_service_url",
+			"value": "http://localhost:8081",
+			"type": "string"
+		},
+		{
+			"key": "api_version",
+			"value": "v1",
+			"type": "string"
+		}
+	]
+} 
