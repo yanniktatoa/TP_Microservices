@@ -1,10 +1,18 @@
 # TP_Microservices
-# Prérequis
+# 🚀Prérequis
     Java 17 
     Spring boot
     maven
     maria_db
-# Fonctionnalités
+# 📁 Structure du Projet
+
+    TP_Microservices/
+    ├── discovery-server/          # Serveur Eureka (Port 8761)
+    ├── category-service/          # Service Catégories (Port 8082)
+    ├── product-service/           # Service Produits (Port 8081)
+    ├── database-schema.sql        # Script DB
+    └── README.md                  # Documentation
+# ✨Fonctionnalités
 
     Discovery Server (Port 8761)
     -  Registre Central - Enregistrement automatique des services
@@ -18,7 +26,7 @@
     - Communication Inter-Services - Appel du Category Service via OpenFeign
     - API REST - Endpoints RESTful pour la gestion des produits
     - Tests de Communication - Endpoint de test pour vérifier la communication
-# Test
+# 🧪Test
 Démarrez les services en commencant part le discovery-server en faisant
 
     mvn spring-boot:run
@@ -35,7 +43,7 @@ Puis les autres services dans n'importe quel ordre
 
 <img width="1477" height="356" alt="Capture d'écran 2025-08-14 153222" src="https://github.com/user-attachments/assets/1b602874-2d9a-4199-82ad-e0c4f2850e20" />
 
-# Test avec Postman
+# 🧪Test avec Postman
 Copier et coller le fichier Spring-Microservices-Tests.postman_collection.json pour importer la collection de test
 
 <img width="504" height="654" alt="Capture d'écran 2025-08-14 154056" src="https://github.com/user-attachments/assets/a68a37f0-2fd0-41e1-8e18-791e1f7812e9" />
