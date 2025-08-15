@@ -14,14 +14,14 @@
     └── README.md                  # Documentation
 # ✨Fonctionnalités
 
-    Discovery Server (Port 8761)
+    🔎Discovery Server (Port 8761)
     -  Registre Central - Enregistrement automatique des services
     -  Interface Web - Dashboard Eureka pour visualiser les services
-    Category Service (Port 8082)
+    📦Category Service (Port 8082)
     - CRUD Catégories - Création, lecture, mise à jour, suppression
     - API REST - Endpoints RESTful pour la gestion des catégories
     - Validation des Données - Contrôle des données d'entrée
-    Product Service (Port 8081)
+    🍇Product Service (Port 8081)
     - CRUD Produits - Gestion complète des produits
     - Communication Inter-Services - Appel du Category Service via OpenFeign
     - API REST - Endpoints RESTful pour la gestion des produits
